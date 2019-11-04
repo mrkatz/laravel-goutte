@@ -1,0 +1,45 @@
+{
+  "name": "mrkatz/laravel-goutte",
+  "description": "Laravel-Goutte is a laravel service container wrapper for FriendsOfPHP Goutte Package which is a screen scraping and web crawling library for PHP.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Adam Kaczocha",
+      "email": "adamkaczocha@gmail.com"
+    }
+  ],
+  "homepage": "https://github.com/mrkatz/laravel-goutte",
+  "keywords": [
+    "Laravel",
+    "Goutte",
+    "Scrapper"
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "fabpot/goutte": "^3.2",
+    "mrkatz/laravel-helpers": "dev-master"
+  },
+  "require-dev": {
+      "orchestra/testbench": "^3.8|^4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mrkatz\\LaravelGoutte\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Mrkatz\\LaravelGoutte\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Mrkatz\\LaravelGoutte\\GoutteServiceProvider"
+      ],
+      "aliases": {
+        "Goutte": "Mrkatz\\LaravelGoutte\\GoutteFacade"
+      }
+    }
+  }
+}
